@@ -1,13 +1,11 @@
 #include "push_swap.h"
 
-void	ft_arg_to_stack(char *argv[], t_stack *stack)
+void	ft_arg_to_stack(int argc, char *argv[], t_stack *stack)
 {
-	int	stack_p;
-	int	args_p;
-
-	stack_p = 0;
-	while (stack_p < stack->size)
+	while ((argc - 1) > 0)
 	{
-		*(stack->top + s) = argv[] 
+		stack->top++;
+		stack->base[stack->top] = argv[argc - 1];
+		argc--;
 	}
 }
