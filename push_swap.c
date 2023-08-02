@@ -11,5 +11,6 @@ int	main(int argc, char *argv[])
 		ft_init_stack(argc, &a);
 		ft_init_stack(argc, &b);
 		ft_arg_to_stack(argc, argv, &a);
+		ft_select_sort(&a, &b);
 	}
 }
