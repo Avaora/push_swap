@@ -5,20 +5,18 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	sum = 0;
-	while ((((*str > 0x08) && (*str < 0x0e)) || (*str == 0x20))
-		&& (*str != 0x0))
+	while ((*str == 0x20) && (*str != 0x0))
 		str++;
-	if (*str == 0x2d)
+	while (*str != 0x20 && *str != 0x0)
 	{
-		sign = -1;
-		str++;
-	}
-	else if (*str == 0x2b)
-		str++;
-	while (((*str > 0x2f) && (*str < 0x3a)))
-	{
-		sum *= 10;
-		sum = (sum + (*str - 0x30));
+		if (*str == 0x2d)
+			sign = -1;
+		else if (*str == 0x2b)
+			sign = 1;
+		else if (ft_dtoi(str, sum) > sum)
+			sum += ft_dtoi(str, sum);
+		else
+			ft_exit();
 		str++;
 	}
 	return ((sum * sign));
