@@ -13,14 +13,11 @@ int	ft_count_byte(int argc, char *argv[])
 		x = 0;
 		while (argv[i][x] != 0x0)
 		{
-			if (argv[i][x] == 0x20)
-				
-			else if (((argv[i][x] == 0x2b) || (argv[i][x] == 0x2d))
-				&& ((argv[i][x + 1] > 0x2f) && (argv[i][x + 1] < 0x3a)))
+			if ((argv[i][x] == 0x2b) || (argv[i][x] == 0x2d))
 				count++;
 			else if ((argv[i][x] > 0x2f) && (argv[i][x] < 0x3a))
 				count++;
-			else
+			else if (argv[i][x] != 0x20)
 				ft_exit();
 			x++;
 		}
