@@ -11,11 +11,9 @@ int	ft_atoi(const char *str)
 	i = 0;
 	if (ft_lentil_space(str) > 11)
 		ft_exit();
-	if(str[i] == 0x2d)
-	{
+	if (str[i] == 0x2d)
 		sign = -1;
-		i++;
-	}
+	i += ft_skip_list(str, "-+");
 	while ((str[i] != 0x20) && (str[i] != 0x0))
 	{
 		sum *= 10;

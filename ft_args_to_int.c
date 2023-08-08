@@ -17,6 +17,8 @@ int	*ft_args_to_int(int argc, char *argv[], int count)
 		{
 			if (argv[i][x] == 0x20)
 				x += ft_skip_list(&argv[i][x], " ");
+			if (argv[i][x] == 0x0)
+				break ;
 			stack[loc] = ft_atoi(&argv[i][x]);
 			loc++;
 			x += ft_skip_list(&argv[i][x], "-+0123456789");

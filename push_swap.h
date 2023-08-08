@@ -18,7 +18,7 @@ int		ft_count_args(int argc, char *argv[]);
 void	ft_exit(void);
 void	ft_init_stack(int argc, t_stack *stack);
 int		ft_lentil_space(const char *str);
-int		ft_skip_list(char *str, char *lst);
+int		ft_skip_list(const char *str, char *lst);
 void	*ft_zalloc(size_t size);
 
 #endif

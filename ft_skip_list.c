@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	ft_skip_list(char *str, char *lst)
+int	ft_skip_list(const char *str, char *lst)
 {
 	int	i;
 	int	x;
