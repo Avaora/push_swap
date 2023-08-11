@@ -35,4 +35,5 @@ void	ft_rrr(t_stack *a, t_stack *b)
 		i++;
 	}
 	b->base[b->top] = tmp;
+	write(1, "rrr\n", 4);
 }
