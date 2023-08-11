@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ikalende <ikalende@student.42istanbul.com  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/11 09:24:01 by ikalende          #+#    #+#             */
+/*   Updated: 2023/08/11 09:25:29 by ikalende         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <stdio.h>
+
 typedef struct s_stack
 {
 	int	*base;
@@ -22,7 +34,7 @@ void	ft_check_one_arg(char argv[]);
 void	ft_copy_to_list(t_stack *stack, int *lst);
 int		ft_count_args(int argc, char *argv[]);
 int		ft_digit_count(int num);
-void	ft_exit(int flag, void *mem1, void* mem2);
+void	ft_exit(int flag, void *mem1, void *mem2);
 int		ft_find_biggest(t_stack *stack);
 int		ft_find_smallest(t_stack *stack);
 void	ft_init_stacks(int count_args, t_stack *a, t_stack *b);
