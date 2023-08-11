@@ -1,10 +1,12 @@
 #include "push_swap.h"
 
-void	ft_rotate(t_stack *stack)
+void	ft_rb(t_stack *stack)
 {
 	int	tmp;
 	int	i;
 
+	if (stack->top < 1)
+		return ;
 	tmp = stack->base[stack->top];
 	i = stack->top;
 	while (i > 0)
@@ -13,4 +15,5 @@ void	ft_rotate(t_stack *stack)
 		i--;
 	}
 	stack->base[0] = tmp;
+	write(1, "rb\n", 3);
 }

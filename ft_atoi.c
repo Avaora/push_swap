@@ -13,10 +13,10 @@ int	ft_atoi(const char *str)
 		sign = -1;
 	i += ft_skip_list(str, "-+");
 	i += ft_skip_list(&str[i], "0");
-	if (str[i] == 0x30)
+	if ((str[i] == 0x20) || (str[i] == 0x0))
 		return (0);
 	if (ft_lentil_space(&str[i]) > 10)
-		ft_exit();
+		ft_exit(1, NULL, NULL);
 	while ((str[i] != 0x20) && (str[i] != 0x0))
 	{
 		sum *= 10;
@@ -25,6 +25,6 @@ int	ft_atoi(const char *str)
 	}
 	sum = sum * sign;
 	if ((sum < INT_MIN) || (sum > INT_MAX))
-		ft_exit();
+		ft_exit(1, NULL, NULL);
 	return (sum);
 }

@@ -14,12 +14,12 @@ void	ft_check_one_arg(char argv[])
 		{
 			x += ft_skip_list(&argv[x], "0123456789");
 			if (argv[x] != 0x20 && argv[x] != 0x0)
-				ft_exit();
+				ft_exit(1, NULL, NULL);
 			x += ft_skip_list(&argv[x], " ");
 		}
 		else
-			ft_exit();
+			ft_exit(1, NULL, NULL);
 	}
 	if (x == 0)
-		ft_exit();
+		ft_exit(1, NULL, NULL);
 }

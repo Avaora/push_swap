@@ -8,7 +8,7 @@ void	*ft_zalloc(size_t size)
 	i = 0;
 	mem = malloc(size);
 	if (mem == NULL)
-		ft_exit();
+		ft_exit(0, NULL, NULL);
 	while (i < size)
 	{
 		*(mem + i) = 0;

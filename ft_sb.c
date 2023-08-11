@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	ft_swap(t_stack *stack)
+void	ft_sb(t_stack *stack)
 {
 	int	tmp;
 
@@ -9,4 +9,5 @@ void	ft_swap(t_stack *stack)
 	tmp = stack->base[stack->top];
 	stack->base[stack->top] = stack->base[stack->top - 1];
 	stack->base[stack->top - 1] = tmp;
+	write(1, "sb\n", 3);
 }

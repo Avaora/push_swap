@@ -21,7 +21,7 @@ int	ft_count_args(int argc, char *argv[])
 		}
 		i++;
 	}
-	if (count == 0)
-		ft_exit();
+	if ((count == 0) || (count == 1))
+		ft_exit(0, NULL, NULL);
 	return (count);
 }
