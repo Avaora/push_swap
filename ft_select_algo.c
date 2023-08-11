@@ -4,7 +4,10 @@ void	ft_select_algo(t_stack *a, t_stack *b)
 {
 	int	*sorted;
 	if (a->size == 2)
-		ft_sa(a);
+	{
+		if (a->base[a->top] > a->base[a->top - 1])
+			ft_sa(a);
+	}
 	else if (a->size == 3)
 		ft_3n_sort(a);
 	else if (a->size == 4)
@@ -15,10 +18,12 @@ void	ft_select_algo(t_stack *a, t_stack *b)
 		{
 		sorted = ft_zalloc(sizeof(*sorted) * (a->size));
 		ft_copy_to_list(a, sorted);
-		ft_bubble_sort(sorted, a->top);
+		ft_bubble_sort(sorted, a->top);		
 		ft_simplify_stack(a, sorted);
+
 		ft_radix_sort(a, b);
 		if (sorted != NULL)
 			free(sorted);
 		}
+	ft_exit(0, a->base, b->base);
 }
